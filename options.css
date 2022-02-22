@@ -1,0 +1,86 @@
+@media (prefers-color-scheme: light) { :root {
+	--bg: #fff;
+	--fg: #252525;
+	--br: #e0e0e0;
+}}
+
+@media (prefers-color-scheme: dark) { :root {
+	--bg: #1b1b1b;
+	--fg: #ccc;
+	--br: #363636;
+}}
+
+body {
+	background-color: var(--bg);
+	color: var(--fg);
+	text-align: center;
+	margin: 0;
+}
+
+input, button, textarea {
+	background-color: var(--bg);
+	color: var(--fg);
+	border: 1px inset var(--br);
+	font-family: system-ui;
+	font-size: inherit;
+}
+
+textarea {
+	margin: auto !important; /* to keep it centered */
+	display: block;
+	width: 240px;
+	height: 120px;
+}
+
+input:focus-within, textarea:focus-within {
+	outline: none;
+}
+
+button {
+	cursor: pointer;
+	margin-top: 1em;
+}
+button:not(:active) {
+	border-style: outset;
+}
+
+hr {
+	border-color: var(--br);
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-button {
+	width: 16px;
+	height: 16px;
+}
+::-webkit-scrollbar-button:vertical:decrement {
+	background-image: linear-gradient(transparent 68%, var(--bg) 68%), linear-gradient(135deg, var(--bg) 45%, transparent 45%), linear-gradient(45deg, var(--fg) 57%, var(--bg) 57%);
+}
+::-webkit-scrollbar-button:vertical:increment {
+	background-image: linear-gradient(45deg, var(--bg) 45.1%, transparent 45.1%), linear-gradient(-225deg, transparent 57%, var(--bg) 57%), linear-gradient(-180deg, var(--bg) 33%, var(--fg) 33%);
+}
+::-webkit-scrollbar-button:horizontal:decrement {
+	background-image: linear-gradient(-135deg, transparent 53%, var(--bg) 53%), linear-gradient(-45deg, transparent 53%, var(--bg) 53%), linear-gradient(90deg, var(--fg) 70%, var(--bg) 70%);
+}
+::-webkit-scrollbar-button:horizontal:increment {
+	background-image: linear-gradient(135deg, transparent 53%, var(--bg) 53%), linear-gradient(45deg, transparent 53%, var(--bg) 53%), linear-gradient(-90deg, var(--fg) 70%, var(--bg) 70%);
+}
+::-webkit-scrollbar-track:vertical {
+	border-left: 1px inset var(--br);
+	border-right: 1px inset var(--br);
+}
+::-webkit-scrollbar-track:horizontal {
+	border-top: 1px inset var(--br);
+	border-bottom: 1px inset var(--br);
+}
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-button {
+	border: 1px outset var(--br);
+}
+::-webkit-scrollbar-thumb:active,
+::-webkit-scrollbar-button:active {
+	border-style: inset;
+}
+::-webkit-scrollbar-corner {
+	display: none;
+}

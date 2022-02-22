@@ -1,0 +1,11 @@
+{
+	"name": "DevTools customisation",
+	"version": "1.0.0",
+	"description": "Custom font and CSS for Chrome DevTools.",
+	"devtools_page": "devtools.html",
+	"options_page": "options.html",
+	"manifest_version": 2,
+	"permissions": [
+		"storage"
+	]
+}
