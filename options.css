@@ -17,7 +17,7 @@ body {
 	margin: 0;
 }
 
-input, button, textarea {
+input, button, ::file-selector-button, textarea {
 	background-color: var(--bg);
 	color: var(--fg);
 	border: 1px inset var(--br);
@@ -26,7 +26,7 @@ input, button, textarea {
 }
 
 textarea {
-	margin: auto !important; /* to keep it centered */
+	margin: auto !important; /* keep it centered */
 	display: block;
 	width: 240px;
 	height: 120px;
@@ -36,11 +36,16 @@ input:focus-within, textarea:focus-within {
 	outline: none;
 }
 
-button {
-	cursor: pointer;
-	margin-top: 1em;
+fieldset {
+	border: 2px groove var(--br);
+	display: inline-flex;
+	flex-direction: column;
 }
-button:not(:active) {
+
+button, ::file-selector-button {
+	cursor: pointer;
+}
+button:not(:active), ::file-selector-button:not(:active) {
 	border-style: outset;
 }
 

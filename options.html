@@ -9,13 +9,31 @@
 		<h1>DevTools customisation</h1>
 		<hr>
 
-		<label for="font-family">font-family</label>
-		<input type="text" name="font-family" id="font-family">
-		<label for="font-size">font-size</label>
-		<input type="text" name="font-size" id="font-size">
-		<p>Custom CSS</p>
-		<textarea></textarea>
+		<fieldset>
+			<legend>font-family</legend>
+			<input type="text" name="font-family" id="font-family">
+		</fieldset>
+		<fieldset>
+			<legend>font-size</legend>
+			<input type="text" name="font-size" id="font-size">
+		</fieldset>
 
+		<br/>
+
+		<fieldset>
+			<legend>Text</legend>
+			<textarea></textarea>
+		</fieldset>
+		<fieldset style="vertical-align: top">
+			<legend>File</legend>
+			<input type="file" name="css" id="css" accept=".css"
+				style="border: none">
+			<p style="text-align: left">
+				Needs to be in the extension's folder
+			</p>
+		</fieldset>
+
+		<hr>
 		<button id="save">Save</button>
 		<p id="status"></p>
 
